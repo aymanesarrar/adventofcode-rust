@@ -17,5 +17,12 @@ fn main() {
     }
     vec.sort();
     
-    println!("{:?}", vec.last().copied())
+    println!("{:?}", vec.last().copied());
+    let mut sum_of_three = 0;
+    let last_three = &vec[(vec.len() - 3)..];
+
+    for i in last_three {
+        sum_of_three += i;
+    }
+    println!("{:?}", sum_of_three);
 }
